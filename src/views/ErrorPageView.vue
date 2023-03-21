@@ -13,7 +13,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+/* sass removed */
 .btn {
     margin-top: 20px;
     padding: 10px 20px;
