@@ -5,6 +5,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: "/:catchAll(.*)",
+      name: "ErrorPage",
+      component: () => import('../views/ErrorPageView.vue')
+    },
+    {
       path: '/',
       name: 'home',
       component: EventListView
@@ -22,12 +27,8 @@ const router = createRouter({
       props: true,
       name: 'eventDetails',
       component: () => import('../views/EventDetailsView.vue')
-    },
-    {
-      path: "*",
-      name: "ErrorPage",
-      component: () => import('../views/ErrorPageView.vue')
     }
+    
   ]
 })
 
